@@ -1,4 +1,4 @@
-What is the use of the keyof keyword in TypeScript?
+##What is the use of the keyof keyword in TypeScript?
 
 Keyof হলো কোন type object এর key গুলোকে নেওয়া।
 আমরা জানি object প্রতিটা property গুলোতে key এবং value থাকে।
