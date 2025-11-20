@@ -1,8 +1,13 @@
-##What is the use of the keyof keyword in TypeScript?
+# TypeScript Concepts: `keyof`, Union & Intersection Types
+
+---
+
+## 1. The `keyof` Keyword in TypeScript
 
 Keyof হলো কোন type object এর key গুলোকে নেওয়া।
 আমরা জানি object প্রতিটা property গুলোতে key এবং value থাকে।
-TypeScript এ keyof type Object থেকে তার key গুলো নিয়ে আসে
+TypeScript এ keyof type Object থেকে তার key গুলো নিয়ে আসে 
+
 type User = {
   id: number;
   name: string;
@@ -16,6 +21,7 @@ type UserKeys = keyof User;
 
 পরবর্তীতে এই key er মাধ্যমে আমরা চাইলে bracket notation এর মাধ্যমে যে কোন key এর value নিতে পারবো।
 
+### Example:
 type User = {
     name : string
     id : number
@@ -30,9 +36,9 @@ console.log(gerPropertyFromObj(user, "roll"))
 
 এখানে আরেকটি সুবিধা হলো কোন key যদি ভুল লেখা হয় তাহলে কোডেই এরর দিবে।
 
+# example of using union and intersection types in TypeScript
 
-Provide an example of using union and intersection types in TypeScript.
-//union
+## 2. Union Types
 type TwoFriends = "Tanvir" | "Abid";
 
 const friends = (myFriends: TwoFriends) => {
@@ -46,7 +52,7 @@ const friends = (myFriends: TwoFriends) => {
 };
 friends("Tanvir");
 
-//intersaction
+## 3. Intersection Types
 type employee = {id: number, name: string,}
 type manager = {id: number, name: string, designation: string}
 
